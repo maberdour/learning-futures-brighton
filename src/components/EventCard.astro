@@ -1,5 +1,6 @@
 ---
 const {event,slug}=Astro.props;
 const date=event.dateLabel || new Date(`${event.date}T12:00:00`).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+const root=import.meta.env.BASE_URL.replace(/\/$/,'')+'/';
 ---
-<article class="archive-card"><div class="event-date">{date}</div><h2>{event.title}</h2><p>{event.summary}</p><a href={`/past-events/${slug}/`}>View event and resources →</a></article>
+<article class="archive-card"><div class="event-date">{date}</div><h2>{event.title}</h2><p>{event.summary}</p><a href={root+`past-events/${slug}/`}>View event and resources →</a></article>
