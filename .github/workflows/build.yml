@@ -1,7 +1,7 @@
-name: Build and preview static site
+name: Build and deploy static site
 on:
   push:
-    branches: [development]
+    branches: [development, main]
   pull_request:
   workflow_dispatch:
 
@@ -30,13 +30,13 @@ jobs:
         with:
           name: learning-futures-static-site
           path: dist/
-      - if: github.ref == 'refs/heads/development' && github.event_name != 'pull_request'
+      - if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist/
 
-  deploy-preview:
-    if: github.ref == 'refs/heads/development' && github.event_name != 'pull_request'
+  deploy-production:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -45,5 +45,4 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-# This publishes ONLY to the GitHub Pages preview.
-# Existing hosting and main branch remain untouched.
+# Development builds are checked but not deployed. Only main publishes to GitHub Pages.
