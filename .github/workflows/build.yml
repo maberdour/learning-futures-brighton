@@ -1,9 +1,19 @@
-name: Build static site
+name: Build and preview static site
 on:
   push:
     branches: [development]
   pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,5 +30,20 @@ jobs:
         with:
           name: learning-futures-static-site
           path: dist/
-# Deployment to your existing host is intentionally NOT enabled.
-# Configure credentials and get approval before adding an SFTP deployment step.
+      - if: github.ref == 'refs/heads/development' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+  deploy-preview:
+    if: github.ref == 'refs/heads/development' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+# This publishes ONLY to the GitHub Pages preview.
+# Existing hosting and main branch remain untouched.
