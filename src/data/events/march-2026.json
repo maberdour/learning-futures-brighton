@@ -1,0 +1,29 @@
+{
+  "title": "Flip, Freelance, Futures",
+  "date": "2026-03-24",
+  "dateLabel": "24 March 2026",
+  "venue": "Runway East Brighton",
+  "summary": "Flipped learning, freelance careers and the state of digital learning.",
+  "lumaUrl": "https://luma.com/6oslkbop",
+  "speaker1": {
+    "name": "Don Cooke",
+    "talkTitle": "Murder in the training room",
+    "description": "Rethinking live learning time through flipped and blended learning.",
+    "slides": "",
+    "videoUrl": ""
+  },
+  "speaker2": {
+    "name": "Viv Cole",
+    "talkTitle": "Taking your freelance career to the next level",
+    "description": "Practical ways to navigate the stages and strategic choices of freelance work.",
+    "slides": "",
+    "videoUrl": ""
+  },
+  "speaker3": {
+    "name": "Kirstie Greany",
+    "talkTitle": "State of digital learning 2026: What’s still missing for employees?",
+    "description": "Research into employee expectations and gaps in workplace digital learning.",
+    "slides": "",
+    "videoUrl": ""
+  }
+}

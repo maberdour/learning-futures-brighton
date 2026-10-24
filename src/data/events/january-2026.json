@@ -1,0 +1,29 @@
+{
+  "title": "New Year, New Lightning Talks",
+  "date": "2026-01-01",
+  "dateLabel": "January 2026",
+  "venue": "The Skiff, Brighton",
+  "summary": "The inaugural Learning Futures Brighton meetup, featuring three lightning talks.",
+  "lumaUrl": "https://luma.com/zhnxm4dd",
+  "speaker1": {
+    "name": "Mark Aberdour & Tosin Adebisi",
+    "talkTitle": "Launching a Youth Leadership Social Enterprise",
+    "description": "Lessons from developing and piloting the ARLLS youth leadership programme.",
+    "slides": "",
+    "videoUrl": ""
+  },
+  "speaker2": {
+    "name": "Sally Burns",
+    "talkTitle": "Filling the gap in the creator economy",
+    "description": "The journey from identifying a market gap to launching The Portal.",
+    "slides": "",
+    "videoUrl": ""
+  },
+  "speaker3": {
+    "name": "Stuart Lamour",
+    "talkTitle": "Swimming upstream against a great torrent of disorganisation",
+    "description": "Lightweight UX research to improve LMS navigation, clarity and learner experience.",
+    "slides": "",
+    "videoUrl": ""
+  }
+}

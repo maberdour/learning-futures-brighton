@@ -1,0 +1,5 @@
+---
+const {event,slug}=Astro.props;
+const date=event.dateLabel || new Date(`${event.date}T12:00:00`).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+---
+<article class="archive-card"><div class="event-date">{date}</div><h2>{event.title}</h2><p>{event.summary}</p><a href={`/past-events/${slug}/`}>View event and resources →</a></article>

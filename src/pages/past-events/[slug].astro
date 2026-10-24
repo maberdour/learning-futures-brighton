@@ -1,0 +1,9 @@
+---
+import type { Event } from '../../types';
+import Base from '../../layouts/Base.astro';
+export function getStaticPaths(){const files=import.meta.glob<Event>('../../data/events/*.json',{eager:true,import:'default'});return Object.entries(files).map(([path,event])=>({params:{slug:path.split('/').pop().replace('.json','')},props:{event}}));}
+const {event}=Astro.props;
+const date=event.dateLabel || new Date(`${event.date}T12:00:00`).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+const speakers=[event.speaker1,event.speaker2,event.speaker3];
+---
+<Base title={event.title}><div class="wrap pagehead"><div class="eyebrow">Past Event · {date}</div><h1>{event.title}</h1><p class="lead">{event.summary}</p>{event.venue&&<p><strong>Venue:</strong> {event.venue}</p>}<a class="pill" href={event.lumaUrl} target="_blank" rel="noopener noreferrer">Original Luma event ↗</a></div><section><div class="wrap"><div class="sectionhead"><h2>Speakers and talks</h2></div><div class="speaker-grid">{speakers.map((speaker,i)=><article class="speaker-card"><div class="eyebrow">Talk {i+1}</div><h2>{speaker.name}</h2><strong>{speaker.talkTitle}</strong><p>{speaker.description}</p>{(speaker.slides||speaker.videoUrl)&&<div class="resource-links">{speaker.slides&&<a href={speaker.slides} target="_blank" rel="noopener noreferrer">Download slides ↗</a>}{speaker.videoUrl&&<a href={speaker.videoUrl} target="_blank" rel="noopener noreferrer">Watch recording ↗</a>}</div>}</article>)}</div><p><a href="/past-events/">← All past events</a></p></div></section></Base>
