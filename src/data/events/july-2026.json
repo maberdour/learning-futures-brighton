@@ -1,0 +1,29 @@
+{
+  "title": "Empowering Learners in the Digital Age",
+  "date": "2026-07-21",
+  "dateLabel": "21 July 2026",
+  "venue": "Runway East Brighton",
+  "summary": "Skills pathways, immersive learning and AI-powered learner engagement.",
+  "lumaUrl": "https://luma.com/ydx3qyav",
+  "speaker1": {
+    "name": "Dan Wallman",
+    "talkTitle": "From Skills Bootcamps to Tech Talent Champions: New Routes into Tech",
+    "description": "Government-funded skills programmes and local routes into entry-level tech employment.",
+    "slides": "",
+    "videoUrl": ""
+  },
+  "speaker2": {
+    "name": "Jim Lee",
+    "talkTitle": "From Hype to How: Making Immersive Learning Work",
+    "description": "Lessons from implementing immersive learning suites at East Sussex College Group.",
+    "slides": "",
+    "videoUrl": ""
+  },
+  "speaker3": {
+    "name": "Jonathan Archibald",
+    "talkTitle": "Increasing Student Engagement with AI",
+    "description": "How Lingoda uses AI to personalise learning experiences.",
+    "slides": "",
+    "videoUrl": ""
+  }
+}

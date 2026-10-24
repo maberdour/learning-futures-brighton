@@ -1,0 +1,29 @@
+{
+  "title": "Impact, Behaviour, Insights, AI",
+  "date": "2026-05-19",
+  "dateLabel": "19 May 2026",
+  "venue": "Runway East Brighton",
+  "summary": "Discovery, the science of surprise and AI in higher education.",
+  "lumaUrl": "https://luma.com/x6on0uqa",
+  "speaker1": {
+    "name": "Emilie Forrest",
+    "talkTitle": "Human-centred discovery and employee insight",
+    "description": "Embedding qualitative discovery and AI-assisted insights into everyday learning practice.",
+    "slides": "",
+    "videoUrl": ""
+  },
+  "speaker2": {
+    "name": "Sophie Costin",
+    "talkTitle": "The science surprise: making learning more human in the age of AI",
+    "description": "Using surprise and emotion to support attention, memory and behaviour change.",
+    "slides": "",
+    "videoUrl": ""
+  },
+  "speaker3": {
+    "name": "Tucker MacNeill",
+    "talkTitle": "The Good, the Bad, and the Technologically Ugly: The impact of AI in Higher Education",
+    "description": "How universities are responding to the benefits and challenges of generative AI.",
+    "slides": "",
+    "videoUrl": ""
+  }
+}

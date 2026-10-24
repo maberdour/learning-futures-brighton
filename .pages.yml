@@ -1,0 +1,114 @@
+media:
+  input: public/resources
+  output: /resources
+content:
+  - name: events
+    label: Events
+    type: collection
+    path: src/data/events
+    format: json
+    view:
+      primary: title
+      fields: [title, date]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    filename: "{primary}.json"
+    fields:
+      - name: title
+        label: Event title
+        type: string
+        required: true
+      - name: date
+        label: Event date (YYYY-MM-DD)
+        type: date
+        required: true
+      - name: dateLabel
+        label: Display date (e.g. January 2026)
+        type: string
+      - name: venue
+        label: Venue
+        type: string
+      - name: summary
+        label: Description
+        type: text
+      - name: lumaUrl
+        label: Original Luma URL
+        type: string
+      - name: speaker1
+        label: Speaker 1
+        type: object
+        required: true
+        fields:
+          - name: name
+            label: Speaker name
+            type: string
+            required: true
+          - name: talkTitle
+            label: Talk title
+            type: string
+            required: true
+          - name: description
+            label: Talk description
+            type: text
+          - name: slides
+            label: Slides URL (PDF or PowerPoint)
+            type: string
+          - name: videoUrl
+            label: Video URL
+            type: string
+      - name: speaker2
+        label: Speaker 2
+        type: object
+        required: true
+        fields:
+          - name: name
+            label: Speaker name
+            type: string
+            required: true
+          - name: talkTitle
+            label: Talk title
+            type: string
+            required: true
+          - name: description
+            label: Talk description
+            type: text
+          - name: slides
+            label: Slides URL (PDF or PowerPoint)
+            type: string
+          - name: videoUrl
+            label: Video URL
+            type: string
+      - name: speaker3
+        label: Speaker 3
+        type: object
+        required: true
+        fields:
+          - name: name
+            label: Speaker name
+            type: string
+            required: true
+          - name: talkTitle
+            label: Talk title
+            type: string
+            required: true
+          - name: description
+            label: Talk description
+            type: text
+          - name: slides
+            label: Slides URL (PDF or PowerPoint)
+            type: string
+          - name: videoUrl
+            label: Video URL
+            type: string
+  - name: next-event
+    label: Next Event
+    type: file
+    path: src/data/next-event.json
+    format: json
+    fields:
+      - name: embedCode
+        label: Luma embed code
+        type: text
+        description: Paste the iframe embed code copied from Luma.

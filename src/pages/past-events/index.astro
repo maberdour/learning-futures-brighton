@@ -1,0 +1,8 @@
+---
+import type { Event } from '../../types';
+import Base from '../../layouts/Base.astro';
+import EventCard from '../../components/EventCard.astro';
+const files=import.meta.glob<Event>('../../data/events/*.json',{eager:true,import:'default'});
+const events=Object.entries(files).map(([path,event])=>({slug:path.split('/').pop().replace('.json',''),event})).sort((a,b)=>b.event.date.localeCompare(a.event.date));
+---
+<Base title="Past Events"><div class="wrap pagehead"><div class="eyebrow">Event archive</div><h1>Past Events</h1><p class="lead">Explore previous Learning Futures Brighton events, talks and resources.</p></div><section><div class="wrap"><div class="archive-grid">{events.map(({slug,event})=><EventCard event={event} slug={slug}/>)}</div></div></section></Base>
