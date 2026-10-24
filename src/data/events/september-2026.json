@@ -6,24 +6,18 @@
   "summary": "A look at standards, human-centred AI and designing better facilitated learning experiences.",
   "lumaUrl": "https://luma.com/agyppgl7",
   "speaker1": {
-    "name": "Peter Dobinson",
+    "name": "Peter Dobinsons",
     "talkTitle": "Why Do Standards Matter, and Why Might They Not?",
-    "description": "How SCORM, xAPI, skills frameworks and emerging interoperability standards shape learning technology.",
-    "slides": "",
-    "videoUrl": ""
+    "description": "How SCORM, xAPI, skills frameworks and emerging interoperability standards shape learning technology."
   },
   "speaker2": {
     "name": "Rachelle Williams",
     "talkTitle": "Beyond the Slides: Why the Best Facilitators Stop Presenting and Start Designing",
-    "description": "Six evidence-based principles for engaging, participant-led facilitation.",
-    "slides": "",
-    "videoUrl": ""
+    "description": "Six evidence-based principles for engaging, participant-led facilitation."
   },
   "speaker3": {
     "name": "Daryl Hedley",
     "talkTitle": "Can learning be improved with the use of AI?",
-    "description": "Practical examples of human-centred AI in university learning and tutoring.",
-    "slides": "",
-    "videoUrl": ""
+    "description": "Practical examples of human-centred AI in university learning and tutoring."
   }
 }
