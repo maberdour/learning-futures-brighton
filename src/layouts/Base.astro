@@ -1,8 +1,9 @@
 ---
 import '../styles/global.css';
 const {title='Learning Futures Brighton',description='Connecting Brighton’s learning, tech and design communities.'}=Astro.props;
+const root=import.meta.env.BASE_URL.replace(/\/$/,'')+'/';
 ---
 <!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content={description}/><title>{title} | Learning Futures Brighton</title></head><body>
-<header><div class="wrap nav"><a class="wordmark" href="/">Learning Futures Brighton</a><nav class="navlinks" aria-label="Main navigation"><a href="/">Home</a><a href="/#next-event">Next Event</a><a href="/past-events/">Past Events</a><a href="/#about">About</a></nav></div></header>
+<header><div class="wrap nav"><a class="wordmark" href={root}>Learning Futures Brighton</a><nav class="navlinks" aria-label="Main navigation"><a href={root}>Home</a><a href={root+'#next-event'}>Next Event</a><a href={root+'past-events/'}>Past Events</a><a href={root+'#about'}>About</a></nav></div></header>
 <main><slot/></main><footer><div class="wrap foot"><span>© Learning Futures Brighton</span><span><a href="https://luma.com/futuresbri">Luma</a><a href="https://www.linkedin.com/company/learning-futures-brighton">LinkedIn</a></span></div></footer>
 </body></html>
