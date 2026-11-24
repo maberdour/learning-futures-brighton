@@ -24,5 +24,7 @@ export interface Event {
   speaker3: EventSpeaker;
   hostedBy?: EventPartner;
   sponsoredBy?: EventPartner;
+  sponsoredBy2?: EventPartner;
+  sponsoredBy3?: EventPartner;
   supportedBy?: EventPartner;
 }
