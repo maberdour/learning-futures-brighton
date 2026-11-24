@@ -9,18 +9,18 @@
     "name": "Mark Aberdour & Tosin Adebisi",
     "talkTitle": "Launching a Youth Leadership Social Enterprise",
     "description": "Lessons from developing and piloting the ARLLS youth leadership programme.",
-    "slides": "/resources/Learning Futures Meetup - January 2026 Talk 1.pdf"
+    "slides": "/resources/Learning Futures Meetup - January 2026 - Mark Aberdour.pdf"
   },
   "speaker2": {
+    "name": "Stuart Lamour",
+    "talkTitle": "Swimming upstream against a great torrent of disorganisation ",
+    "description": "Lightweight UX research to improve LMS navigation, clarity and learner experience.",
+    "slides": "/resources/Learning Futures Meetup - January 2026 - Stuart Lamour.pdf"
+  },
+  "speaker3": {
     "name": "Sally Burns",
     "talkTitle": "Filling the gap in the creator economy",
     "description": "The journey from identifying a market gap to launching The Portal.",
-    "slides": "/resources/Learning Futures Meetup - January 2026 Talk 3.pdf"
-  },
-  "speaker3": {
-    "name": "Stuart Lamour",
-    "talkTitle": "Swimming upstream against a great torrent of disorganisation",
-    "description": "Lightweight UX research to improve LMS navigation, clarity and learner experience.",
-    "slides": "/resources/Learning Futures Meetup - January 2026 Talk 2.pdf"
+    "slides": "/resources/Learning Futures Meetup - January 2026 - Sally Burns.pdf"
   }
 }
