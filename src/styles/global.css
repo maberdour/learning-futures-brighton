@@ -23,3 +23,6 @@ html{scroll-padding-top:20px}.archive-card a:focus-visible,.pill:focus-visible{o
 .partner-link img{display:block;max-width:100%;width:auto;max-height:90px;object-fit:contain}
 a.partner-link:hover strong{text-decoration:underline}
 @media(max-width:720px){.partner-grid{grid-template-columns:1fr}}
+
+.partner-entries{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:22px}
+.partner-entries .partner-link{flex:1 1 110px;min-width:0}
