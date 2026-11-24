@@ -2,7 +2,6 @@
   "title": "Flip, Freelance, Futures",
   "date": "2026-03-24",
   "dateLabel": "24 March 2026",
-  "venue": "Runway East Brighton",
   "summary": "Flipped learning, freelance careers and the state of digital learning.",
   "lumaUrl": "https://luma.com/6oslkbop",
   "speaker1": {
@@ -22,5 +21,23 @@
     "talkTitle": "State of digital learning 2026: What’s still missing for employees?",
     "description": "Research into employee expectations and gaps in workplace digital learning.",
     "slides": "/resources/Learning Futures Meetup - March 2026 - Kirstie Greany.pdf"
+  },
+  "hostedBy": {
+    "name": "Runway East Brighton",
+    "logo": "/resources/RunwayEast.png",
+    "url": "https://www.runwayea.st/office-spaces-locations/brighton"
+  },
+  "sponsoredBy": {
+    "name": "Fiona MacNeill | Macknowlogist",
+    "url": "https://macknowlogist.co.uk/"
+  },
+  "sponsoredBy2": {
+    "name": "Mark Aberdour Consulting",
+    "url": "https://www.markaberdour.com/"
+  },
+  "sponsoredBy3": {
+    "name": "The Portal",
+    "logo": "/resources/The Portal Logo.png",
+    "url": "https://www.jointheportal.com/"
   }
 }
