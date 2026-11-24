@@ -27,9 +27,6 @@ content:
       - name: dateLabel
         label: Display date (e.g. January 2026)
         type: string
-      - name: venue
-        label: Venue
-        type: string
       - name: summary
         label: Description
         type: text
@@ -116,7 +113,33 @@ content:
             label: Website URL
             type: string
       - name: sponsoredBy
-        label: Sponsored by
+        label: Sponsor 1
+        type: object
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: logo
+            label: Logo
+            type: image
+          - name: url
+            label: Website URL
+            type: string
+      - name: sponsoredBy2
+        label: Sponsor 2
+        type: object
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: logo
+            label: Logo
+            type: image
+          - name: url
+            label: Website URL
+            type: string
+      - name: sponsoredBy3
+        label: Sponsor 3
         type: object
         fields:
           - name: name
