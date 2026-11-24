@@ -39,5 +39,10 @@
     "name": "The Portal",
     "logo": "/resources/The Portal Logo.png",
     "url": "https://www.jointheportal.com/"
+  },
+  "supportedBy": {
+    "name": "Silicon Brighton",
+    "logo": "/resources/silicon-brighton-logo-1.png",
+    "url": "https://siliconbrighton.com/"
   }
 }
