@@ -22,5 +22,18 @@
     "talkTitle": "Filling the gap in the creator economy",
     "description": "The journey from identifying a market gap to launching The Portal.",
     "slides": "/resources/Learning Futures Meetup - January 2026 - Sally Burns.pdf"
+  },
+  "hostedBy": {
+    "name": "The Skiff",
+    "logo": "/resources/theskiff.svg",
+    "url": "https://theskiff.org/"
+  },
+  "sponsoredBy": {
+    "name": "Fiona MacNeill | Macknowlogist"
+  },
+  "supportedBy": {
+    "name": "Silicon Brighton",
+    "logo": "/resources/silicon-brighton-logo.png",
+    "url": "https://siliconbrighton.com/"
   }
 }
