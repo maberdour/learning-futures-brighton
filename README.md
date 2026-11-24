@@ -1,48 +1,128 @@
-# Learning Futures Brighton — Astro + Pages CMS
+# Learning Futures Brighton
 
-This project converts the approved static prototype v5 into an Astro static website.
+A static event website for the Learning Futures Brighton community, built with **Astro 5**, managed through **Pages CMS**, and hosted on **GitHub Pages**.
 
-## Preview locally
+**Live website:** https://maberdour.github.io/learning-futures-brighton/  
+**Repository:** https://github.com/maberdour/learning-futures-brighton  
+**Content editor:** https://app.pagescms.org  
+**Event registration:** https://luma.com/futuresbri
 
-1. Install Node.js 22 or newer.
-2. Run `npm ci` (uses the committed lockfile), then `npm run dev`.
-3. Open the localhost address shown in the terminal.
-4. Run `npm run build` to generate static HTML in `dist/`.
+## Architecture
 
-## Collaborative editing
+- **Astro 5** builds static HTML, CSS and JavaScript. No application server or website database is required.
+- **GitHub** is the source of truth for code, images and JSON event content.
+- **Pages CMS** is a hosted, Git-backed headless CMS. It edits files in GitHub rather than maintaining a separate content database.
+- **Luma** manages upcoming event details and registration; the homepage displays a Luma iframe.
+- **GitHub Actions** installs dependencies, checks the project, builds it and deploys approved production changes.
+- **GitHub Pages** serves the generated static website over HTTPS.
 
-1. Put this project in a GitHub repository.
-2. Open [Pages CMS](https://pagescms.org/) and sign in using GitHub.
-3. Grant organisers suitable access to the repository and Pages CMS.
-4. Edit the five existing events or add new JSON event records. Each event has exactly three speaker fields.
-5. Publishing commits changes to GitHub; the included GitHub Actions workflow builds a downloadable static artifact.
+### Content flow
 
-## Slides and video
+```text
+Organiser -> Pages CMS -> main (JSON content commit)
+                                  |
+Developer -> development -> PR -> main
+                                  |
+                           GitHub Actions
+                       npm ci / check / build
+                                  |
+                             GitHub Pages
+                                  |
+                            Public website
 
-Add slide files to `public/resources/` (or use externally hosted files), and enter their public URLs in the relevant speaker's `slides` field. Add externally hosted video URLs in `videoUrl`. Blank fields are hidden on the public site. Large videos should not be committed to GitHub.
+Luma -> embedded upcoming-event content in visitors' browsers
+```
 
-## Next event
+Past event data is read at build time. Updating JSON files requires a new successful deployment before visitors see the changes. The Luma iframe loads its event content from Luma in the visitor's browser, so changes made within the same Luma event can appear without rebuilding this site.
 
-Edit Next event in Pages CMS to maintain the homepage event and its three speakers. Registration stays on Luma via the booking URL.
+## Branches and publishing
 
-## Deployment
+| Branch | Purpose | Deployment |
+| --- | --- | --- |
+| `development` | Website code and design changes, testing and review | Runs checks and build; **does not publish** |
+| `main` | Production website and organiser-managed event content | Successful builds **publish to GitHub Pages** |
 
-No credentials are required for the site itself. The workflow **builds only** and does not publish to your hosting. After confirming the hosting provider, domain, document root and SFTP method, add a secure deployment step using GitHub Actions secrets. Do not store passwords in code.
+### Organiser content updates
 
-## Notes
+1. Open https://app.pagescms.org and sign in with GitHub.
+2. Select `maberdour/learning-futures-brighton` and **the `main` branch**.
+3. Open **Events** to edit or create past events, or **Next Event** to update the Luma iframe embed code.
+4. Save. Pages CMS commits the content changes to `main`.
+5. GitHub Actions checks, builds and deploys the updated website automatically. Monitor the run in the [Actions tab](https://github.com/maberdour/learning-futures-brighton/actions).
 
-- The two original Brighton JPEG assets are copied unchanged into `public/images/`.
-- Content was migrated from the approved prototype v5, not re-researched.
-- Event slugs use filenames such as `september-2026.json`.
-- Set the actual domain in `astro.config.mjs` before launch.
-- Complete Pages CMS account authorisation as described below.
+Organisers need the appropriate GitHub repository/Pages CMS permissions. Saving a change does not bypass build validation: if a build fails, the new content will not deploy.
 
-## Development and organiser access
+### Website development changes
 
-All source work is on `development`. No hosting deployment is configured. Do not merge or deploy without Mark's approval.
+1. Work on `development`, not directly on `main`.
+2. **Synchronise `development` with the latest `main` first**, so recent CMS event edits are retained.
+3. Make and test changes on `development`; pushes trigger automated checks and a build, but not deployment.
+4. Open a pull request from `development` to `main`, review the changes and obtain approval.
+5. Merge the approved pull request. A successful `main` workflow publishes the changes.
 
-Open https://app.pagescms.org, sign in with GitHub, and install/authorise the Pages CMS GitHub App for `maberdour/learning-futures-brighton`. Select the **development** branch before editing. An account owner must complete the GitHub authorisation; repository configuration alone cannot grant this access. Give each organiser repository write access or invite them through Pages CMS as appropriate.
+GitHub Pages provides one public site for this repository. The `development` branch does **not** have its own automatically deployed preview URL. Use local preview or build artifacts for review.
 
-**Next event** edits the homepage event. Complete event details and all three speaker names/talk titles, then enable “Show event details”. Until enabled, the existing Luma placeholder remains. **Events** edits past events and creates event pages. Each event has exactly three required speaker objects, with optional slides and video links. Upload resources into the CMS media folder (`public/resources`), then use their `/resources/...` URLs. The original artwork folder is intentionally outside CMS media access.
+## Content structure
 
-Changes saved in Pages CMS commit to the selected branch. They do not publish the website. Keep edits on development while awaiting approval. The build-only GitHub Actions workflow uses `npm ci` and uploads the static output as an artifact.
+- `src/data/events/*.json`: past event records. Each event has three speaker objects (`speaker1`, `speaker2`, `speaker3`), with names and talk titles plus optional descriptions, slides and video URLs.
+- `src/data/next-event.json`: the `embedCode` field containing the Luma iframe HTML. This is the only field in the **Next Event** CMS editor.
+- `.pages.yml`: Pages CMS content schema and media configuration.
+- `src/pages/`: Astro pages and routes.
+- `src/components/`: reusable website components.
+- `src/layouts/` and `src/styles/`: shared layout and styling.
+- `public/images/`: original Brighton artwork, retained unchanged.
+- `public/resources/`: downloadable resources and CMS media uploads.
+
+For past events, add a slides URL to the relevant speaker's `slides` field and an externally hosted video URL to `videoUrl`. Blank optional fields are hidden. Avoid committing large video files to GitHub. The original Brighton artwork is deliberately outside the CMS media folder.
+
+## Local development
+
+Requires **Node.js 22 or newer**.
+
+```bash
+npm ci
+npm run dev
+```
+
+Open the local address printed by Astro. Before proposing a change, run:
+
+```bash
+npm run check
+npm run build
+npm run preview
+```
+
+The static production output is generated in `dist/`. `npm ci` uses the committed lockfile.
+
+## Deployment configuration
+
+The workflow is defined in `.github/workflows/build.yml`.
+
+- On pushes to `development` or `main`, and on pull requests, it runs `npm ci`, `npm run check` and `npm run build`.
+- It uploads `dist/` as a downloadable workflow artifact.
+- Only a push to **`main`** uploads a GitHub Pages deployment artifact and runs `actions/deploy-pages`.
+- GitHub Pages uses the repository's `github-pages` deployment environment.
+
+Astro is configured in `astro.config.mjs` with:
+
+```js
+site: 'https://maberdour.github.io',
+base: '/learning-futures-brighton',
+```
+
+These settings produce the current public URL: https://maberdour.github.io/learning-futures-brighton/
+
+### Moving to a custom domain later
+
+Keep GitHub Pages as the host. When ready, configure the custom domain in GitHub Pages, update the domain's DNS records, and adjust Astro's `site` and `base` settings (and any affected asset links). Verify HTTPS and the resulting links before switching over.
+
+## Operations and resilience
+
+- GitHub retains source and content history; keep an independent backup of the repository where practical.
+- The public static site does not need Pages CMS to be available to serve existing content.
+- If Pages CMS is unavailable, content remains in GitHub and can be edited there.
+- Luma registration and embedded event content depend on Luma's availability.
+- Review failed GitHub Actions runs before assuming a saved CMS change is live.
+- Keep Astro and workflow dependencies updated through reviewed development changes.
+
+The original Brighton artwork must not be cropped, retouched or regenerated without explicit approval.
