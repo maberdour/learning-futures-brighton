@@ -9,21 +9,18 @@
     "name": "Emilie Forrest",
     "talkTitle": "Human-centred discovery and employee insight",
     "description": "Embedding qualitative discovery and AI-assisted insights into everyday learning practice.",
-    "slides": "",
-    "videoUrl": ""
+    "slides": "/resources/Learning Futures Meetup - May 2026 - Emilie Forrest.pdf"
   },
   "speaker2": {
     "name": "Sophie Costin",
     "talkTitle": "The science surprise: making learning more human in the age of AI",
     "description": "Using surprise and emotion to support attention, memory and behaviour change.",
-    "slides": "",
-    "videoUrl": ""
+    "slides": "/resources/Learning Futures Meetup - May 2026 - Sophie Costin.pdf"
   },
   "speaker3": {
     "name": "Tucker MacNeill",
     "talkTitle": "The Good, the Bad, and the Technologically Ugly: The impact of AI in Higher Education",
     "description": "How universities are responding to the benefits and challenges of generative AI.",
-    "slides": "",
-    "videoUrl": ""
+    "slides": "/resources/Learning Futures Meetup - May 2026 - Tucker MacNeill.pdf"
   }
 }
