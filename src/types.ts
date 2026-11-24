@@ -6,6 +6,12 @@ export interface EventSpeaker {
   videoUrl?: string;
 }
 
+export interface EventPartner {
+  name?: string;
+  logo?: string;
+  url?: string;
+}
+
 export interface Event {
   title: string;
   date: string;
@@ -16,4 +22,7 @@ export interface Event {
   speaker1: EventSpeaker;
   speaker2: EventSpeaker;
   speaker3: EventSpeaker;
+  hostedBy?: EventPartner;
+  sponsoredBy?: EventPartner;
+  supportedBy?: EventPartner;
 }
