@@ -2,7 +2,6 @@
   "title": "New Year, New Lightning Talks",
   "date": "2026-01-01",
   "dateLabel": "January 2026",
-  "venue": "The Skiff, Brighton",
   "summary": "The inaugural Learning Futures Brighton meetup, featuring three lightning talks.",
   "lumaUrl": "https://luma.com/zhnxm4dd",
   "speaker1": {
@@ -31,6 +30,10 @@
   "sponsoredBy": {
     "name": "Fiona MacNeill | Macknowlogist",
     "url": "https://macknowlogist.co.uk/"
+  },
+  "sponsoredBy2": {
+    "name": "Mark Aberdour Consulting ",
+    "url": "https://www.markaberdour.com/"
   },
   "supportedBy": {
     "name": "Silicon Brighton",
