@@ -3,7 +3,7 @@ import type { Event } from '../types';
 import nextEvent from '../data/next-event.json';
 import Base from '../layouts/Base.astro';
 import EventCard from '../components/EventCard.astro';
-const embedCode=nextEvent.embedCode || '';
+const embedCode=(nextEvent as { embedCode?: string }).embedCode || '';
 const iframeSrc=embedCode.match(/<iframe\b[^>]*\bsrc\s*=\s*["']([^"']+)["']/i)?.[1] || '';
 const lumaEmbedUrl=/^https:\/\/(?:[a-z0-9-]+\.)?(?:lu\.ma|luma\.com)\//i.test(iframeSrc) ? iframeSrc.replace(/&amp;/g,'&') : '';
 const root=import.meta.env.BASE_URL.replace(/\/$/,'')+'/';
