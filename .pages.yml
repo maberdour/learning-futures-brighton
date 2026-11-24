@@ -102,6 +102,45 @@ content:
           - name: videoUrl
             label: Video URL
             type: string
+      - name: hostedBy
+        label: Hosted by
+        type: object
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: logo
+            label: Logo
+            type: image
+          - name: url
+            label: Website URL
+            type: string
+      - name: sponsoredBy
+        label: Sponsored by
+        type: object
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: logo
+            label: Logo
+            type: image
+          - name: url
+            label: Website URL
+            type: string
+      - name: supportedBy
+        label: Supported by
+        type: object
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: logo
+            label: Logo
+            type: image
+          - name: url
+            label: Website URL
+            type: string
   - name: next-event
     label: Next Event
     type: file
