@@ -24,5 +24,5 @@ html{scroll-padding-top:20px}.archive-card a:focus-visible,.pill:focus-visible{o
 a.partner-link:hover strong{text-decoration:underline}
 @media(max-width:720px){.partner-grid{grid-template-columns:1fr}}
 
-.partner-entries{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:22px}
-.partner-entries .partner-link{flex:0 0 auto;min-width:0}
+.partner-entries{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:10px}
+.partner-entries .partner-link{flex:0 0 auto;min-width:0;min-height:0;gap:5px}
