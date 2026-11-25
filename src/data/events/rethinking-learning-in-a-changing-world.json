@@ -2,7 +2,6 @@
   "title": "Rethinking Learning in a Changing World",
   "date": "2026-11-17",
   "dateLabel": "November 2026",
-  "venue": "Runway East",
   "summary": "Exploring podcast learning science, adaptability and human-centred EdTech, with lightning talks, pizza, and a lively audience discussion with the speakers.",
   "lumaUrl": "https://luma.com/g1d7wkn2",
   "speaker1": {
@@ -19,5 +18,28 @@
     "name": "​Emily Maltby and James Maltby",
     "talkTitle": "​Rethinking EdTech Through Human-Centred Design",
     "description": "​Skills Tally is an EdTech tool that uses NFC technology to help teachers capture meaningful evidence of students’ skills without breaking the flow of their lessons. Designed with privacy and human interaction at its core, it works offline, sends no data to the cloud, uses no AI, and requires neither voice or video recordings nor student-facing devices.\n\n​Our approach puts technology in the background, keeping teachers as the experts in the room and human interaction at the heart of learning, while giving teachers a practical way to capture valuable evidence of skills that might otherwise be lost in the moment as teachers deal with competing demands in their busy classroom.\n\n​In this talk, we’ll share our design journey so far, from initial ideas and prototyping through testing and go-to-market strategy. We’ll reflect on what we’ve learnt along the way, discuss the challenges of bringing an EdTech idea to life, and share our aspirations for the future of Skills Tally.\n\n​There will also be an opportunity for audience members to share their own EdTech start-up experiences, exchange ideas and ask questions.\n\n​Emily is Founder and Education Lead at Good Learning Lab. She completed her Master's in Education and Technology at the Institute of Education, UCL in 2025. Prior to this she studied languages and taught English, French and Spanish for 13 years. Her work is informed by a keen interest in digital design thinking, learning through making, and innovative blended learning approaches.\n\n​James is Founder and Technology Lead at Good Learning Lab. He has over a decade’s experience in the non-profit and education sectors. He has managed digital learning platforms that have reached over 1 million learners worldwide."
+  },
+  "hostedBy": {
+    "name": "Runway East Brighton",
+    "logo": "/resources/RunwayEast.png",
+    "url": "https://www.runwayea.st/office-spaces-locations/brighton"
+  },
+  "sponsoredBy": {
+    "name": "Fiona MacNeill | Macknowlogist",
+    "url": "https://macknowlogist.co.uk/"
+  },
+  "sponsoredBy2": {
+    "name": "Mark Aberdour Consulting",
+    "url": "https://www.markaberdour.com/"
+  },
+  "sponsoredBy3": {
+    "name": "The Portal",
+    "logo": "/resources/The Portal Logo.png",
+    "url": "https://www.jointheportal.com/"
+  },
+  "supportedBy": {
+    "name": "Silicon Brighton",
+    "logo": "/resources/silicon-brighton-logo-1.png",
+    "url": "https://siliconbrighton.com/"
   }
 }
