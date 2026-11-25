@@ -2,5 +2,6 @@
 const {event,slug}=Astro.props;
 const date=new Date(`${event.date}T12:00:00`).toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'});
 const root=import.meta.env.BASE_URL.replace(/\/$/,'')+'/';
+const speakers=[event.speaker1?.name,event.speaker2?.name,event.speaker3?.name].filter((name):name is string=>typeof name==='string' && name.trim().length>0);
 ---
-<article class="archive-card"><div class="event-date">{date}</div><h2>{event.title}</h2><p>{event.summary}</p><a href={root+`past-events/${slug}/`}>View event and resources →</a></article>
+<article class="archive-card"><div class="event-date">{date}</div><h2>{event.title}</h2><p>{event.summary}</p>{speakers.length>0 && <p class="archive-speakers"><strong>Speakers:</strong> {speakers.join(', ')}</p>}<a href={root+`past-events/${slug}/`}>View event and resources →</a></article>
