@@ -20,5 +20,28 @@
     "talkTitle": "Increasing Student Engagement with AI",
     "description": "How Lingoda uses AI to personalise learning experiences.",
     "slides": "/resources/Learning Futures Meetup - July 2026 - Jonathan Archibald.pdf"
+  },
+  "hostedBy": {
+    "name": "Runway East Brighton",
+    "logo": "/resources/RunwayEast.png",
+    "url": "https://www.runwayea.st/office-spaces-locations/brighton"
+  },
+  "sponsoredBy": {
+    "name": "Fiona MacNeill | Macknowlogist",
+    "url": "https://macknowlogist.co.uk/"
+  },
+  "sponsoredBy2": {
+    "name": "Mark Aberdour Consulting",
+    "url": "https://www.markaberdour.com/"
+  },
+  "sponsoredBy3": {
+    "name": "Silicon Brighton",
+    "logo": "/resources/silicon-brighton-logo-1.png",
+    "url": "https://siliconbrighton.com/"
+  },
+  "supportedBy": {
+    "name": "Silicon Brighton",
+    "logo": "/resources/silicon-brighton-logo-1.png",
+    "url": "https://siliconbrighton.com/"
   }
 }
