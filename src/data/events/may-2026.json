@@ -2,7 +2,6 @@
   "title": "Impact, Behaviour, Insights, AI",
   "date": "2026-05-19",
   "dateLabel": "19 May 2026",
-  "venue": "Runway East Brighton",
   "summary": "Discovery, the science of surprise and AI in higher education.",
   "lumaUrl": "https://luma.com/x6on0uqa",
   "speaker1": {
@@ -22,5 +21,28 @@
     "talkTitle": "The Good, the Bad, and the Technologically Ugly: The impact of AI in Higher Education",
     "description": "How universities are responding to the benefits and challenges of generative AI.",
     "slides": "/resources/Learning Futures Meetup - May 2026 - Tucker MacNeill.pdf"
+  },
+  "hostedBy": {
+    "name": "Runway East Brighton",
+    "logo": "/resources/RunwayEast.png",
+    "url": "https://www.runwayea.st/office-spaces-locations/brighton"
+  },
+  "sponsoredBy": {
+    "name": "Fiona MacNeill | Macknowlogist",
+    "url": "https://macknowlogist.co.uk/"
+  },
+  "sponsoredBy2": {
+    "name": "Mark Aberdour Consulting",
+    "url": "https://www.markaberdour.com/"
+  },
+  "sponsoredBy3": {
+    "name": "Learnteam",
+    "logo": "/resources/learnteam_logo.jpg",
+    "url": "https://learnteam.org/"
+  },
+  "supportedBy": {
+    "name": "Silicon Brighton",
+    "logo": "/resources/silicon-brighton-logo-1.png",
+    "url": "https://siliconbrighton.com/"
   }
 }
