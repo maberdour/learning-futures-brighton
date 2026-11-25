@@ -164,6 +164,27 @@ content:
           - name: url
             label: Website URL
             type: string
+  - name: supporters
+    label: Homepage Supporters
+    type: collection
+    path: src/data/supporters
+    format: json
+    filename: "{primary}.json"
+    view:
+      primary: name
+      fields: [name]
+    fields:
+      - name: name
+        label: Supporter name
+        type: string
+        required: true
+      - name: logo
+        label: Supporter logo
+        type: image
+        required: true
+      - name: url
+        label: Website URL
+        type: string
   - name: next-event
     label: Next Event
     type: file
