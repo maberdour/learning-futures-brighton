@@ -33,3 +33,11 @@ a.partner-link:hover strong{text-decoration:underline}
 .supporter-item a{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
 .supporter-item img{display:block;max-width:100%;max-height:85px;width:auto;height:auto;object-fit:contain}
 @media(max-width:700px){.supporters-grid{gap:20px}.supporter-item{width:135px}}
+
+/* Clickable past-event cards */
+a.archive-card{display:block;color:inherit;text-decoration:none;background:var(--paper);transition:background-color .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+a.archive-card:hover{background:var(--soft);border-color:var(--accent);box-shadow:0 8px 24px rgba(0,0,0,.08);transform:translateY(-3px)}
+a.archive-card:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+a.archive-card .archive-card-cta{display:inline-block;margin-top:12px;text-decoration:underline;text-underline-offset:3px}
+a.archive-card:hover .archive-card-cta,a.archive-card:focus-visible .archive-card-cta{color:var(--accent)}
+@media(prefers-reduced-motion:reduce){a.archive-card{transition:none}a.archive-card:hover{transform:none}}
