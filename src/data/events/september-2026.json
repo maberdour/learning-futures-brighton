@@ -7,12 +7,14 @@
   "speaker1": {
     "name": "Peter Dobinson",
     "talkTitle": "Why Do Standards Matter, and Why Might They Not?",
-    "description": "How SCORM, xAPI, skills frameworks and emerging interoperability standards shape learning technology."
+    "description": "How SCORM, xAPI, skills frameworks and emerging interoperability standards shape learning technology.",
+    "slides": "/resources/Learning Futures Meetup - Sept 2026 - Peter Dobinson.pdf"
   },
   "speaker2": {
     "name": "Rachelle Williams",
     "talkTitle": "Beyond the Slides: Why the Best Facilitators Stop Presenting and Start Designing",
-    "description": "Six evidence-based principles for engaging, participant-led facilitation."
+    "description": "Six evidence-based principles for engaging, participant-led facilitation.",
+    "slides": "/resources/Learning Futures Meetup - Sept 2026 - Rachelle Williams.pdf"
   },
   "speaker3": {
     "name": "Daryl Hedley",
